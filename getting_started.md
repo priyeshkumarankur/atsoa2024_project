@@ -1,4 +1,3 @@
-# Getting started
 
 ## Installing Prerequisite Software
  **1) Python, C & C++** (installation via apt package manager)
