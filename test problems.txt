@@ -1,2 +1,5 @@
+KH
+RT 1,2,5
 blast 1,2,3
 jet 2,5
+Plot density contours, velocity vectors, and B streamlines.
