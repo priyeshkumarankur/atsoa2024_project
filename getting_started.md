@@ -23,13 +23,13 @@
 
 
 ## Read about: (just google it)
-1) Numerical Simulation
-2) Astrophysical fluid dynamics
-3) PLUTO Astrophysics code
-4) Kelvin-Helmholtz Instability
-5) Rayleigh-Taylor Instability
-6) Astrophysical Jets
-7) Blast Simulations
+- Numerical Simulation
+- Astrophysical fluid dynamics
+- PLUTO Astrophysics code
+- Kelvin-Helmholtz Instability
+- Rayleigh-Taylor Instability
+- Astrophysical Jets
+- Blast Simulations
 
 
 ## Tasks:
@@ -39,11 +39,25 @@
 
 
 ## Steps to run a simulation:
-1) Go to the directory of any test problem. We need 3 files for the simulation definition.h ,pluto.ini , and init.c  (cp definitions_01.h definitions.h    cp pluto_01.ini pluto.ini)
-2) First, run the Python script python3 $PLUTO_DIR/setup.py , which will create the makefile (choose linux.gcc for serial run and linux.mpicc for parallel runs).
-3) Make sure to change output format to vtk files.
-4) Now run makefile make , it will compile all the .c files into .o files, and a binary file pluto will be generated.
-5) Then, finally, run pluto file. ./pluto for serial and mpirun -np 4 ./pluto  for parallel.
+1) Go to the directory of any test problem. We need 3 files for the simulation - definition.h ,pluto.ini , and init.c
+  
+       > cp definitions_01.h definitions.h
+       > cp pluto_01.ini pluto.ini
+    
+3) First, run the Python script, which will create the makefile (choose linux.gcc for serial run and linux.mpicc for parallel runs).
+  
+       > python3 $PLUTO_DIR/setup.py
+   
+5) Make sure to change output format to **vtk files**.
+6) Now run makefile, it will compile all the .c files into .o files, and a binary file ***pluto*** will be generated.
+   
+        > make
+   
+8) Then, finally, run ***pluto*** file.
+
+        > ./pluto                   # for serial
+        >  mpirun -np 4 ./pluto     # for parallel
+   
 ## Steps to visualise the simulation data:
 1) open paraview in the same directory where simulation data is kept.
 2) open all vtk files group, and apply.
